@@ -80,6 +80,9 @@ function draw() {
   for (var stone of stones) {
     stone.show();
   }
+  if (zombie.position.x >= width - 300) {
+    zombie.velocityX = -10; zombie.changeAnimation("righttoleft");
+  }
 }
 
 function handleButtonPress() {
